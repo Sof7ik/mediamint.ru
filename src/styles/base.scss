@@ -8,7 +8,7 @@
 
 body
 {
-	background-color: #E5E5E5;
+	background-color: #F7F7FB;
 }
 
 a
@@ -22,6 +22,27 @@ input[type="text"]
 	outline: none;
 }
 
+button
+{
+	border: none;
+	outline: none;
+	background-color: transparent;
+
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+
+	padding: 13px 23px;
+
+	transition: all .3s;
+
+	&:hover
+	{
+		cursor: pointer;
+	}
+}
+
 label:hover
 {
 	cursor: pointer;
@@ -31,4 +52,9 @@ label:hover
 {
 	max-width: 1440px;
 	margin: 0 auto;
+}
+
+.btn
+{
+	border-radius: 10px;
 }

@@ -52,6 +52,8 @@ nav.breadcrumbs
 
 div.product
 {
+	margin-bottom: 41px;
+
 	div.product-head
 	{
 		margin-bottom: 46px;
@@ -131,6 +133,173 @@ div.product
 				font-weight: 700;
 				font-size: 18px;
 				line-height: 22px;
+
+				display: block;
+				margin-bottom: 17px;
+			}
+
+			ul.properties-text
+			{
+				list-style-type: '—  ';
+
+				color: $grayColor;
+
+				font-family: 'Roboto', sans-serif;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 24px;
+
+				li
+				{
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+
+	div.product__info-right
+	{
+		border-radius: 20px;
+
+		padding: 30px 27px 51.6px 27px;
+
+		span.description-title
+		{
+			display: block;
+			margin-bottom: 20px;
+
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			color: $grayColor;
+		}
+
+		div.buttons
+		{
+			width: max-content;
+
+			@include flex(flex, row wrap, flex-start, center);
+
+			margin-bottom: 28px;
+
+			button {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 22px;
+			}
+
+			button#getPrice
+			{
+				border: 2px solid transparent;
+				background-color: #2A54A2;
+				color: #fff;
+
+				margin-right: 34px;
+
+				&:hover
+				{
+					border: 2px solid #2A54A2;
+					background-color: #fff;
+					color: #2A54A2;
+				}
+			}
+
+			button#askQuestion
+			{
+				border: 2px solid #2A54A2;
+
+				&:hover
+				{
+					background-color: #2A54A2;
+					color: #fff;
+				}
+			}
+		}
+
+		div.description-text
+		{
+			max-width: 522px;
+
+			margin-bottom: 37px;
+
+			p, span
+			{
+				font-family: 'Roboto', sans-serif;
+				font-size: 14px;
+				line-height: 16.41px;
+				font-weight: 400;
+			}
+		}
+
+		div.documents
+		{
+			span.documents-title
+			{
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 20px;
+				display: block;
+
+				margin-bottom: 26px;
+			}
+
+			div.documents-list
+			{
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: 1fr;
+				grid-gap: 50px 28.34px;
+
+				a.document-link
+				{
+					display: block;
+
+					div.document
+					{
+						display: flex;
+						flex-flow: row nowrap;
+						justify-content: flex-start;
+						align-items: center;
+
+						transition: all .3s;
+
+						svg
+						{
+							margin-right: 14.17px;
+
+							path
+							{
+								transition: all .3s;
+							}
+						}
+
+						span.document-name
+						{
+							color: $grayColor;
+							font-weight: 600;
+							font-size: 12px;
+							line-height: 15px;
+
+							transition: all .3s;
+						}
+
+						&:hover
+						{
+							cursor: pointer;
+							svg
+							{
+								path
+								{
+									fill: rgba(42, 84, 162, 1);
+								}
+							}
+							span.document-name
+							{
+								color: rgba(42, 84, 162, 1);
+							}
+						}
+					}
+				}
 			}
 		}
 	}

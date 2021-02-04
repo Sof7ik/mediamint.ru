@@ -1,4 +1,4 @@
-$grayColor = rgba(51, 51, 51, 1);
+$grayColor: rgba(51, 51, 51, 1);
 
 @mixin flex($display, $flex-flow, $justify-content, $align-items)
 {

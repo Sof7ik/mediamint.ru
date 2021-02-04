@@ -1,0 +1,60 @@
+@import "mixins.scss";
+
+footer
+{
+	background-color: rgba(18, 23, 58, 1);
+	padding: 60px 136px 31px 105px;
+	div.container
+	{
+		@include flex(flex, row wrap, flex-start, flex-start);
+
+		div.logo
+		{
+			margin-right: 190.34px;
+			span
+			{
+				svg
+				{
+					path
+					{
+						fill: #fff;
+					}
+				}
+			}
+		}
+
+		div.sitemap
+		{
+			@include flex(flex, row nowrap, flex-start, flex-start);
+			margin-right: 116px;
+
+			div.left-sitemap
+			{
+				width: 240px;
+				margin-right: 117.59px;
+			}
+
+			div.left-sitemap, div.right-sitemap
+			{
+				@include flex(flex, column nowrap, flex-start, flex-start);
+
+				a.sitemap__item
+				{
+					color: #FFFFFF;
+
+					font-family: 'Roboto', sans-serif;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 19px;
+
+					margin-bottom: 19px;
+
+					&:last-child
+					{
+						margin-bottom: unset;
+					}
+				}
+			}
+		}
+	}
+}
