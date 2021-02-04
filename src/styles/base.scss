@@ -28,6 +28,13 @@ input[type="tel"]
 main
 {
 	padding: 0 21px;
+
+	@media all and (max-width: 980px)
+	{
+		padding: unset;
+		width: min-content;
+		margin: 0 auto;
+	}
 }
 
 button

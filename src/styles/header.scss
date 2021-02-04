@@ -6,12 +6,38 @@ header {
 	padding-top: 48px;
 
 	margin-bottom: 49.7px;
+
+	transition: all .3s;
+
+	@media all and (max-width: 1000px)
+	{
+		@include flex(flex, column nowrap, flex-start, center);
+		padding-top: 20px;
+	}
 }
 
 div.logo-nav-wrapper,
 div.search-contacts-wrapper
 {
-	@include flex(flex, row wrap, space-between, center)
+	@include flex(flex, row wrap, space-between, center);
+	//transition: all .3s;
+}
+
+div.logo-nav-wrapper
+{
+	@media all and (max-width: 1000px)
+	{
+		order: 2;
+	}
+}
+
+div.search-contacts-wrapper
+{
+	@media all and (max-width: 1000px)
+	{
+		order: 1;
+		margin-bottom: 25px;
+	}
 }
 
 header div.logo

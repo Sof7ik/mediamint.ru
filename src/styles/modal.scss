@@ -117,8 +117,12 @@ div.modal-wrapper
         span.accept-terms
         {
             color: #333333;
-            font-size: 8px;
-            line-height: 11px;
+
+            //font-size: 8px;
+            // line-height: 11px;
+
+            font-size: 12px;
+            line-height: 20px;
 
             text-align: center;
         }
