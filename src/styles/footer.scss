@@ -1,60 +1,151 @@
 @import "mixins.scss";
 
-footer
-{
+footer {
 	background-color: rgba(18, 23, 58, 1);
 	padding: 60px 136px 31px 105px;
-	div.container
-	{
-		@include flex(flex, row wrap, flex-start, flex-start);
+	max-width: 100%;
+}
 
-		div.logo
+div.footer__inner-wrapper
+{
+	@include flex(flex, column nowrap, flex-start, flex-start);
+}
+
+div.up-footer
+{
+	width: 100%;
+	@include flex(flex, row wrap, space-between, flex-start);
+
+	div.logo
+	{
+		//margin-right: 190.34px;
+		span
 		{
-			margin-right: 190.34px;
-			span
+			svg
 			{
-				svg
+				path
 				{
-					path
-					{
-						fill: #fff;
-					}
+					fill: #fff;
 				}
 			}
 		}
+	}
 
-		div.sitemap
+	div.sitemap
+	{
+		@include flex(flex, row nowrap, flex-start, flex-start);
+		//margin-right: 168.23px;
+
+		div.left-sitemap
 		{
-			@include flex(flex, row nowrap, flex-start, flex-start);
-			margin-right: 116px;
+			width: 240px;
+			margin-right: 117.59px;
+		}
 
-			div.left-sitemap
+		div.left-sitemap, div.right-sitemap
+		{
+			@include flex(flex, column nowrap, flex-start, flex-start);
+
+			a.sitemap__item
 			{
-				width: 240px;
-				margin-right: 117.59px;
-			}
+				color: #FFFFFF;
 
-			div.left-sitemap, div.right-sitemap
-			{
-				@include flex(flex, column nowrap, flex-start, flex-start);
+				font-family: 'Roboto', sans-serif;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
 
-				a.sitemap__item
+				margin-bottom: 19px;
+
+				&:last-child
 				{
-					color: #FFFFFF;
-
-					font-family: 'Roboto', sans-serif;
-					font-weight: 400;
-					font-size: 16px;
-					line-height: 19px;
-
-					margin-bottom: 19px;
-
-					&:last-child
-					{
-						margin-bottom: unset;
-					}
+					margin-bottom: unset;
 				}
 			}
+		}
+	}
+
+	div.contacts
+	{
+		@include flex(flex, column nowrap, flex-start, flex-end);
+
+		a
+		{
+			color: #fff;
+		}
+
+		a.contacts-tel
+		{
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 28px;
+
+			margin-bottom: 40px;
+		}
+
+		div.mail-wrapper
+		{
+			@include flex(flex, column nowrap, flex-start, flex-start);
+
+			a.contacts-email
+			{
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 19px;
+
+				text-decoration-line: underline;
+
+				margin-bottom: 14px;
+			}
+
+			button
+			{
+				font-family: 'Roboto', sans-serif;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 14px;
+				color: #fff;
+
+				border: 1px solid #A6A8B5;
+				border-radius: 25px;
+
+				padding: 3px 21px;
+			}
+		}
+	}
+}
+
+div.copyright
+{
+	width: 100%;
+	@include flex(flex, row wrap, space-between, flex-end );
+
+	a, span, p
+	{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	a
+	{
+		transition: all .3s;
+
+		&:hover
+		{
+			color: #fff;
+		}
+	}
+
+	div.copyright__left
+	{
+		a
+		{
+			display: block;
+			margin-bottom: 15px;
 		}
 	}
 }

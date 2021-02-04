@@ -9,6 +9,8 @@
 body
 {
 	background-color: #F7F7FB;
+
+	//position: relative;
 }
 
 a
@@ -16,10 +18,16 @@ a
 	text-decoration: none;
 }
 
-input[type="text"]
+input[type="text"],
+input[type="tel"]
 {
 	border: none;
 	outline: none;
+}
+
+main
+{
+	padding: 0 21px;
 }
 
 button
@@ -50,6 +58,7 @@ label:hover
 
 .container
 {
+	width: 95%;
 	max-width: 1440px;
 	margin: 0 auto;
 }
