@@ -1,0 +1,102 @@
+@import './mixins.scss';
+
+header {
+	@include flex(flex, row wrap, space-between, center);
+
+	padding-top: 48px;
+
+	margin-bottom: 49.7px;
+}
+
+div.logo-nav-wrapper,
+div.search-contacts-wrapper
+{
+	@include flex(flex, row wrap, space-between, center)
+}
+
+div.logo
+{
+	@include flex(flex, row wrap, flex-start, center);
+
+	svg.logo-svg
+	{
+		width: 37.23px;
+		margin-right: 10px;
+	}
+
+	span
+	{
+		margin-right: 70px;
+	}
+}
+
+nav
+{
+	@include flex(flex, row wrap, flex-start, center);
+
+	a.header-navigation__link
+	{
+		color: #444444;
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 400;
+
+		margin-right: 27px;
+
+		&:last-child
+		{
+			margin-right: unset;
+		}
+	}
+}
+
+div.search-contacts-wrapper
+{
+	form.search
+	{
+		margin-right: 68px;
+
+		@include flex(flex, row nowrap, flex-start, center);
+
+		input[type="submit"]#search-btn
+		{
+			display: none;
+		}
+
+		input
+		{
+			width: 106px;
+
+			color: #444;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 16px;
+
+			background-color: transparent;
+
+			padding-left: 5px;
+
+			transition: all .3s;
+
+			//&:focus
+			//{
+			//	border: 1px solid #444444;
+			//	border-radius: 5px;
+			//}
+		}
+	}
+
+	div.contacts
+	{
+		a
+		{
+			color: #000;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+}
