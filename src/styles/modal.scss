@@ -2,7 +2,6 @@
 
 div.modal-wrapper
 {
-    //display: block;
     display: none;
     position: fixed;
     left: 0;
@@ -38,7 +37,7 @@ div.modal-wrapper
 
     form.modal, div.modal
     {
-        width: 450px;
+        max-width: 450px;
 
         position: absolute;
         left: 50%;
@@ -96,7 +95,9 @@ div.modal-wrapper
             margin-top: 20px;
             margin-bottom: 15px;
 
-            padding: 20px 40px;
+            padding: 20px;
+
+            text-align: center;
 
             background-color: #2A54A2;
             border-radius: 10px;
@@ -112,6 +113,10 @@ div.modal-wrapper
             {
                 cursor: pointer;
             }
+            
+            @media all and (max-width: 500px) {
+                padding: 20px 22px;
+            }
         }
 
         span.accept-terms
@@ -125,6 +130,10 @@ div.modal-wrapper
             line-height: 20px;
 
             text-align: center;
+        }
+        
+        @media all and (max-width: 500px) {
+            max-width: 335px;
         }
     }
 }

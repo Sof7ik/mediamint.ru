@@ -52,6 +52,8 @@ const modalHandler = e => {
         document.getElementById('modal-comment').style.display === 'block' ? 'none' : 'none';
 
         modalWindowElem.style.display = 'none';
+
+        document.body.style.overflow = 'auto';
     }
 
     const form = {name: '', tel: '', question: ''};
@@ -62,14 +64,23 @@ const modalHandler = e => {
     const modalType = parseInt(e.currentTarget.dataset.modaltype);
 
     // Тип модалки. 1 - "Узнать цену" (2 инпута), 2 - "Задать вопрос" (3 инпута)
-    if (modalType === 2)
+    if(modalType === 1)
+    {
+        document.getElementById('modal-comment').style.display = 'none';
+        //document.getElementById('modal-submit').value = 'отправить запрос';
+        document.getElementById('modal-submit').textContent = 'отправить запрос';
+    }
+    else if(modalType === 2)
     {
         // Поле для вопроса становится видимым.
         document.getElementById('modal-comment').style.display = 'block';
         modalQuestionElem = document.getElementById('modal-comment');
         modalQuestionElem.addEventListener('input', e => formHandler(e, form));
-        document.getElementById('modal-submit').value = 'задать вопрос';
+        //document.getElementById('modal-submit').value = 'задать вопрос';
+        document.getElementById('modal-submit').textContent = 'задать вопрос';
     }
+
+    document.body.style.overflow = 'hidden';
 
     modalNameElem = document.getElementById('modal-name');
     modalTelElem = document.getElementById('modal-tel');

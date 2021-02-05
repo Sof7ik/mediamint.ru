@@ -2,7 +2,8 @@ export default function () {
     $(document).ready(function(){
         $('.product-photos-slider').slick(
             {
-                infinite: true
+                infinite: true,
+                dots: true
             }
         );
     });

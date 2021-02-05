@@ -1,11 +1,19 @@
 @import './mixins.scss';
 
+div.header-container
+{
+	margin-bottom: 49.7px;
+
+	@media all and (max-width: 650px)
+	{
+		border-bottom: 1px solid #DADADA;
+	}
+}
+
 header {
 	@include flex(flex, row wrap, space-between, center);
 
 	padding-top: 48px;
-
-	margin-bottom: 49.7px;
 
 	transition: all .3s;
 
@@ -19,8 +27,6 @@ header {
 	{
 		@include flex(flex, row wrap, space-between, center);
 		padding: 20px 20px 19px 20px;
-
-		border-bottom: 1px solid #DADADA;
 	}
 }
 

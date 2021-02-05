@@ -64,14 +64,17 @@ label:hover
 
 .container
 {
-	width: 95%;
+	//width: 95%;
+	width: 100%;
+	padding: 0 2.5%;
+
 	max-width: 1440px;
 	margin: 0 auto;
 
-	@media all and (max-width: 980px)
-	{
-		max-width: unset;
-	}
+	//@media all and (max-width: 980px)
+	//{
+	//	max-width: unset;
+	//}
 }
 
 .btn
