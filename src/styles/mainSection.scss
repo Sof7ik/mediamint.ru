@@ -43,7 +43,7 @@ nav.breadcrumbs
 			margin-left: 9.5px;
 			margin-right: 9.5px;
 
-			background-image: url("/src/img/breadcrumb arrow.svg");
+			background-image: url("/src/img/breadcrumb_arrow.svg");
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: contain;
@@ -94,6 +94,20 @@ div.product__info-left
 {
 	margin-right: 33px;
 	@include flex(flex, column nowrap, flex-start, flex-start);
+
+	@media all and (max-width: 1083px)
+	{
+		margin-right: unset;
+	}
+}
+
+div.product__info-left,
+div.product__info-right
+{
+	@media all and (max-width: 980px)
+	{
+		width: 100%;
+	}
 }
 
 div.product-photos
@@ -238,12 +252,13 @@ div.product-properties
 
 	@media all and (max-width: 980px)
 	{
-		max-width: calc(140px + 30px + calc((140px*3) + 40px));
+		//max-width: calc(140px + 30px + calc((140px*3) + 40px));
+		max-width: unset;
 	}
 }
 
 div.product__info-right {
-	border-radius: 20px;
+	//border-radius: 20px;
 
 	padding: 30px 27px 51.6px 27px;
 
@@ -350,7 +365,8 @@ div.description-text
 
 	@media all and (max-width: 980px)
 	{
-		max-width: calc(140px + 30px + calc((140px*3) + 40px));
+		//max-width: calc(140px + 30px + calc((140px*3) + 40px));
+		max-width: unset;
 	}
 }
 

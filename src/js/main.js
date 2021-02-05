@@ -7,5 +7,7 @@ const previewImage = document.getElementById('current-preview');
 
 getPriceBtn.addEventListener('click', modalHandler);
 askQuestionBtn.addEventListener('click', modalHandler);
+
 previewImage.addEventListener('click', scalePreviewImage);
-imageHandler();
+
+imageHandler(document.querySelectorAll('.product-photos .mini img'));

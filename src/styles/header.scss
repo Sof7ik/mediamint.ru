@@ -9,10 +9,18 @@ header {
 
 	transition: all .3s;
 
-	@media all and (max-width: 1000px)
+	@media all and (max-width: 1024px)
 	{
 		@include flex(flex, column nowrap, flex-start, center);
 		padding-top: 20px;
+	}
+
+	@media all and (max-width: 650px)
+	{
+		@include flex(flex, row wrap, space-between, center);
+		padding: 20px 20px 19px 20px;
+
+		border-bottom: 1px solid #DADADA;
 	}
 }
 
@@ -25,15 +33,20 @@ div.search-contacts-wrapper
 
 div.logo-nav-wrapper
 {
-	@media all and (max-width: 1000px)
+	@media all and (max-width: 1024px)
 	{
 		order: 2;
+	}
+
+	@media all and (max-width: 650px)
+	{
+		order: 1;
 	}
 }
 
 div.search-contacts-wrapper
 {
-	@media all and (max-width: 1000px)
+	@media all and (max-width: 1024px)
 	{
 		order: 1;
 		margin-bottom: 25px;
@@ -43,6 +56,11 @@ div.search-contacts-wrapper
 header div.logo
 {
 	margin-right: 33px;
+
+	@media all and (max-width: 650px)
+	{
+		margin-right: unset;
+	}
 }
 
 div.logo
@@ -56,7 +74,7 @@ div.logo
 	}
 }
 
-nav
+nav.header-navigation
 {
 	@include flex(flex, row wrap, flex-start, center);
 
@@ -74,6 +92,11 @@ nav
 		{
 			margin-right: unset;
 		}
+	}
+
+	@media all and (max-width: 650px)
+	{
+		display: none;
 	}
 }
 
@@ -124,5 +147,30 @@ div.search-contacts-wrapper
 			font-size: 16px;
 			line-height: 19px;
 		}
+	}
+
+	@media all and (max-width: 650px)
+	{
+		display: none;
+	}
+}
+
+div.burger-navigation
+{
+	display: none;
+
+	order: 1;
+
+	width: 30px;
+	height: 17px;
+
+	background-image: url("/src/img/burger_menu.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	
+	@media all and (max-width: 650px)
+	{
+		display: block;
 	}
 }

@@ -25,9 +25,7 @@ main {
 @media all and (max-width: 980px) {
 				main {
 								padding: unset;
-								width: -webkit-min-content;
-								width: min-content;
-								margin: 0 auto;
+								width: 100%;
 				}
 }
 
@@ -54,6 +52,11 @@ label:hover {
 				width: 95%;
 				max-width: 1440px;
 				margin: 0 auto;
+}
+@media all and (max-width: 980px) {
+				.container {
+								max-width: unset;
+				}
 }
 
 .btn {
@@ -155,13 +158,23 @@ header {
 				margin-bottom: 49.7px;
 				transition: all 0.3s;
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
 				header {
 								display: flex;
 								flex-flow: column nowrap;
 								justify-content: flex-start;
 								align-items: center;
 								padding-top: 20px;
+				}
+}
+@media all and (max-width: 650px) {
+				header {
+								display: flex;
+								flex-flow: row wrap;
+								justify-content: space-between;
+								align-items: center;
+								padding: 20px 20px 19px 20px;
+								border-bottom: 1px solid #DADADA;
 				}
 }
 
@@ -173,13 +186,18 @@ div.search-contacts-wrapper {
 				align-items: center;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
 				div.logo-nav-wrapper {
 								order: 2;
 				}
 }
+@media all and (max-width: 650px) {
+				div.logo-nav-wrapper {
+								order: 1;
+				}
+}
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
 				div.search-contacts-wrapper {
 								order: 1;
 								margin-bottom: 25px;
@@ -188,6 +206,11 @@ div.search-contacts-wrapper {
 
 header div.logo {
 				margin-right: 33px;
+}
+@media all and (max-width: 650px) {
+				header div.logo {
+								margin-right: unset;
+				}
 }
 
 div.logo {
@@ -201,13 +224,13 @@ div.logo svg.logo-svg {
 				margin-right: 10px;
 }
 
-nav {
+nav.header-navigation {
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: flex-start;
 				align-items: center;
 }
-nav a.header-navigation__link {
+nav.header-navigation a.header-navigation__link {
 				color: #444444;
 				font-family: "Roboto", sans-serif;
 				font-size: 16px;
@@ -215,8 +238,13 @@ nav a.header-navigation__link {
 				font-weight: 400;
 				margin-right: 27px;
 }
-nav a.header-navigation__link:last-child {
+nav.header-navigation a.header-navigation__link:last-child {
 				margin-right: unset;
+}
+@media all and (max-width: 650px) {
+				nav.header-navigation {
+								display: none;
+				}
 }
 
 div.search-contacts-wrapper form.search {
@@ -246,6 +274,27 @@ div.search-contacts-wrapper div.contacts a {
 				font-weight: 400;
 				font-size: 16px;
 				line-height: 19px;
+}
+@media all and (max-width: 650px) {
+				div.search-contacts-wrapper {
+								display: none;
+				}
+}
+
+div.burger-navigation {
+				display: none;
+				order: 1;
+				width: 30px;
+				height: 17px;
+				background-image: url("/src/img/burger_menu.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center center;
+}
+@media all and (max-width: 650px) {
+				div.burger-navigation {
+								display: block;
+				}
 }
 
 nav.breadcrumbs {
@@ -277,7 +326,7 @@ nav.breadcrumbs a.breadcrumbs__item::after {
 				height: 8.36px;
 				margin-left: 9.5px;
 				margin-right: 9.5px;
-				background-image: url("/src/img/breadcrumb arrow.svg");
+				background-image: url("/src/img/breadcrumb_arrow.svg");
 				background-repeat: no-repeat;
 				background-position: center center;
 				background-size: contain;
@@ -320,6 +369,18 @@ div.product__info-left {
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
+}
+@media all and (max-width: 1083px) {
+				div.product__info-left {
+								margin-right: unset;
+				}
+}
+
+@media all and (max-width: 980px) {
+				div.product__info-left,
+div.product__info-right {
+								width: 100%;
+				}
 }
 
 div.product-photos {
@@ -428,12 +489,11 @@ div.product-properties ul.properties-text li {
 }
 @media all and (max-width: 980px) {
 				div.product-properties {
-								max-width: calc(140px + 30px + calc((140px*3) + 40px));
+								max-width: unset;
 				}
 }
 
 div.product__info-right {
-				border-radius: 20px;
 				padding: 30px 27px 51.6px 27px;
 }
 div.product__info-right span.description-title {
@@ -530,7 +590,7 @@ div.description-text p, div.description-text span {
 }
 @media all and (max-width: 980px) {
 				div.description-text {
-								max-width: calc(140px + 30px + calc((140px*3) + 40px));
+								max-width: unset;
 				}
 }
 

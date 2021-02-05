@@ -1,9 +1,5 @@
-const imageHandler = () => {
-    const images = document.querySelectorAll('.product-photos .mini img');
-
+const imageHandler = (images) => {
     const changeImage = e => {
-        console.log('Click to image');
-
         let tempSrc;
 
         let clickedImage = e.currentTarget;
@@ -19,15 +15,6 @@ const imageHandler = () => {
 
 export const scalePreviewImage = (e) => {
     e.currentTarget.classList.toggle('scaled');
-
-    // if (e.currentTarget.style.transform === '' || e.currentTarget.style.transform === 'scale(1)')
-    // {
-    //     e.currentTarget.style.transform = 'scale(2)';
-    // }
-    // else
-    // {
-    //     e.currentTarget.style.transform = 'scale(1)';
-    // }
 }
 
 export default imageHandler;
