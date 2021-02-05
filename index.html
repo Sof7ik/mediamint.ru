@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>МЕТАЛЛОМЕР</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="stylesheet" href="./dist/index.css">
+    <link rel="stylesheet" href="./dist/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/slider/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="src/slider/slick-theme.css"/>
 
     <!--Fonts-->
         <!--Montserrat-->
@@ -143,6 +145,26 @@
                                  id="current-preview">
                         </div>
 
+                        <div class="product-photos-slider" id="slider">
+                            <div class="slider-item">
+                                <img src="./src/img/photos/1.png" alt="product-slider-photo">
+                            </div>
+                            <div class="slider-item">
+                                <img src="./src/img/photos/2.png" alt="product-slider-photo">
+                            </div>
+                            <div class="slider-item">
+                                <img src="./src/img/photos/3.png" alt="product-slider-photo">
+                            </div>
+                            <div class="slider-item">
+                                <img src="./src/img/photos/big.png" alt="product-slider-photo">
+                            </div>
+
+<!--                                <div style="background-color: red; width: 50px; height: 50px;"></div>-->
+<!--                                <div style="background-color: green; width: 50px; height: 50px;"></div>-->
+<!--                                <div style="background-color: blueviolet; width: 50px; height: 50px;"></div>-->
+<!--                                <div style="background-color: black; width: 50px; height: 50px;"></div>-->
+                        </div>
+
                         <div class="product-properties">
                             <span class="properties-title">СВОЙСТВА И СФЕРЫ ПРИМЕНЕНИЯ</span>
 
@@ -158,6 +180,8 @@
                                 <li>Биологические образцы предварительно перед запрессовкой необходимо зафиксировать и удалить из них воду. Очень часто требуется инфильтрация в вакууме.</li>
                                 <li>Гладкие полимерные образцы можно запрессовывать без какой-либо предварительной обработки, в то время как пористые полимеры (губки, проч.) необходимо сначала подвергнуть инфильтрации, для достижения необходимой стабилизации.</li>
                             </ul>
+
+                            <button id="readMoreProperties">читать всё</button>
                         </div>
                     </div>
 
@@ -239,7 +263,6 @@
 
     <footer>
         <div class="container">
-
             <div class="footer__inner-wrapper">
 
                 <div class="up-footer">
@@ -276,7 +299,31 @@
                         </div>
                     </div>
 
+                    <div class="mobile-contacts">
+                        <a href="tel:+74953693049" class="mobile-contacts__item contacts-tel">+7 (495) 369-30-49</a>
+                        <a href="mailto:info@metallomer.ru" class="mobile-contacts__item contacts-email">info
+                            @metallomer.ru</a>
+                    </div>
+
                     <div class="contacts">
+
+                        <div class="logo">
+                            <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 38 28"><g clip-path="url(#clip0)"><path fill="url(#paint0_linear)" d="M12.493 8.827l6.121-8.64H6.694l5.799 8.64z"/><path fill="url(#paint1_linear)" d="M24.736 8.827l5.798-8.64h-11.92l6.122 8.64z"/><path fill="url(#paint2_linear)" d="M.25 8.827h12.243l6.121 18.21L.25 8.827z"/><path fill="url(#paint3_linear)" d="M36.98 8.827H24.735l-6.122 18.21L36.98 8.827z"/><path fill="#009FE3" d="M18.614 27.301L0 8.813 6.89 0h23.448l6.89 8.813L18.615 27.3zM.5 8.781l18.116 17.994L36.73 8.78 30.155.372H7.074L.499 8.782z"/></g><defs><linearGradient id="paint0_linear" x1="12.655" x2="12.655" y1="7.703" y2="-.937" gradientUnits="userSpaceOnUse"><stop stop-color="#252D61"/><stop offset=".063" stop-color="#2A4487"/><stop offset=".106" stop-color="#2A54A2"/><stop offset=".153" stop-color="#2B5DA7"/><stop offset=".371" stop-color="#3A82C0"/><stop offset=".571" stop-color="#4EA1D3"/><stop offset=".749" stop-color="#5FB6DE"/><stop offset=".898" stop-color="#6AC4E5"/><stop offset="1" stop-color="#6EC8E7"/></linearGradient><linearGradient id="paint1_linear" x1="24.574" x2="24.574" y1="7.705" y2="-.935" gradientUnits="userSpaceOnUse"><stop stop-color="#252D61"/><stop offset=".063" stop-color="#2A4487"/><stop offset=".106" stop-color="#2A54A2"/><stop offset=".153" stop-color="#2B5DA7"/><stop offset=".371" stop-color="#3A82C0"/><stop offset=".571" stop-color="#4EA1D3"/><stop offset=".749" stop-color="#5FB6DE"/><stop offset=".898" stop-color="#6AC4E5"/><stop offset="1" stop-color="#6EC8E7"/></linearGradient><linearGradient id="paint2_linear" x1="9.456" x2="9.317" y1="20.866" y2="3.541" gradientUnits="userSpaceOnUse"><stop stop-color="#252D61"/><stop offset=".065" stop-color="#2A3E7D"/><stop offset=".125" stop-color="#2B4E97"/><stop offset=".161" stop-color="#2A54A2"/><stop offset=".187" stop-color="#2B5AA5"/><stop offset=".398" stop-color="#3980BF"/><stop offset=".592" stop-color="#4D9FD2"/><stop offset=".763" stop-color="#5EB5DE"/><stop offset=".905" stop-color="#6AC3E5"/><stop offset="1" stop-color="#6EC8E7"/></linearGradient><linearGradient id="paint3_linear" x1="27.793" x2="27.815" y1="21.273" y2="3" gradientUnits="userSpaceOnUse"><stop stop-color="#252D61"/><stop offset=".065" stop-color="#2A3E7D"/><stop offset=".125" stop-color="#2B4E97"/><stop offset=".161" stop-color="#2A54A2"/><stop offset=".187" stop-color="#2B5AA5"/><stop offset=".398" stop-color="#3980BF"/><stop offset=".592" stop-color="#4D9FD2"/><stop offset=".763" stop-color="#5EB5DE"/><stop offset=".905" stop-color="#6AC3E5"/><stop offset="1" stop-color="#6EC8E7"/></linearGradient><clipPath id="clip0"><path fill="#fff" d="M0 0h37.229v27.301H0z"/></clipPath></defs></svg>
+                            <span>
+                                <svg width="153" height="12" viewBox="0 0 153 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.97378 11.7313V4.99911L5.45565 9.27423L1.91891 4.99911V11.7313H0.156738V0.0662842L5.44945 6.46345L10.7484 0.0662842V11.7313H8.97378Z" fill="black"/>
+                    <path d="M21.7867 4.81297H25.9005V6.46345H21.7867V10.0809H26.7816V11.7313H21.7743H20.0308V0.0662842H21.7743H26.7816V1.69815H21.7867V4.81297Z" fill="black"/>
+                    <path d="M42.0207 1.69815H38.9245V11.7313H37.1499V1.69815H34.0537V0.0662842H42.0207V1.69815Z" fill="black"/>
+                    <path d="M56.6206 11.7313H54.6971L53.6671 9.2308H49.8139L48.7839 11.7313H46.8418L51.7374 0.0662842L56.6206 11.7313ZM52.9784 7.59273L51.7312 4.55857L50.484 7.59273H52.9784Z" fill="black"/>
+                    <path d="M64.687 11.7313H62.7449L67.6467 0.0662842L72.5299 11.7313H70.6002L67.6405 4.57719L64.687 11.7313Z" fill="black"/>
+                    <path d="M81.1296 11.7313H79.1875L84.0893 0.0662842L88.9725 11.7313H87.0428L84.0831 4.57719L81.1296 11.7313Z" fill="black"/>
+                    <path d="M98.2426 11.2722C97.5601 10.9744 96.9706 10.5462 96.4494 10.0126C95.9344 9.47899 95.5249 8.86471 95.2333 8.15736C94.9478 7.45002 94.7927 6.68062 94.7927 5.89261C94.7927 5.1046 94.9416 4.3352 95.2333 3.61544C95.5187 2.9267 95.9282 2.31243 96.4494 1.7602C96.9644 1.22658 97.5601 0.817067 98.2426 0.519236C98.9251 0.221405 99.6697 0.0662842 100.427 0.0662842C101.184 0.0662842 101.928 0.221405 102.629 0.519236C103.3 0.817067 103.889 1.22658 104.423 1.7602C104.938 2.31243 105.335 2.9205 105.62 3.61544C105.906 4.3414 106.061 5.1108 106.061 5.89261C106.061 6.68062 105.912 7.45002 105.62 8.15736C105.335 8.86471 104.938 9.47899 104.423 10.0126C103.889 10.5462 103.3 10.9681 102.629 11.2722C101.928 11.57 101.19 11.7251 100.427 11.7251C99.6697 11.7313 98.9251 11.57 98.2426 11.2722ZM97.6966 3.06942C96.9706 3.8264 96.5611 4.83158 96.5611 5.89881C96.5611 6.96604 96.9706 7.97122 97.6966 8.72821C98.4225 9.4852 99.3967 9.90712 100.427 9.90712C101.457 9.90712 102.431 9.4852 103.157 8.72821C103.883 7.97122 104.292 6.96604 104.292 5.89881C104.292 4.83158 103.883 3.8264 103.157 3.06942C102.431 2.31243 101.457 1.8905 100.427 1.8905C99.3967 1.8905 98.4225 2.31243 97.6966 3.06942Z" fill="black"/>
+                    <path d="M122.274 11.7313V4.99911L118.756 9.27423L115.219 4.99911V11.7313H113.457V0.0662842L118.749 6.46345L124.048 0.0662842V11.7313H122.274Z" fill="black"/>
+                    <path d="M133.666 4.81297H137.78V6.46345H133.666V10.0809H138.661V11.7313H133.653H131.91V0.0662842H133.653H138.661V1.69815H133.666V4.81297Z" fill="black"/>
+                    <path d="M147.428 0.0662842H149.277C150.766 0.0662842 151.629 0.692971 152.082 1.21418C152.69 1.90291 152.994 2.83363 152.994 3.91948C152.994 5.00532 152.69 5.94845 152.082 6.62478C151.629 7.15839 150.76 7.78508 149.277 7.78508H147.701V11.7313H145.939V0.0662842H147.428ZM151.418 3.91948C151.418 3.46652 151.325 2.80261 150.915 2.33104C150.549 1.92152 150.003 1.70436 149.277 1.70436H147.701V6.1346H149.277C150.003 6.1346 150.549 5.92984 150.915 5.52032C151.331 5.04875 151.418 4.39104 151.418 3.91948Z" fill="black"/>
+                </svg>
+                            </span>
+                        </div>
 
                         <a href="tel:+74953693049" class="contacts-tel">+7 (495) 369-30-49</a>
 
@@ -287,7 +334,6 @@
 
                     </div>
                 </div>
-
 
                 <div class="copyright">
 
@@ -306,6 +352,9 @@
     </footer>
 
     <script src="./dist/main.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/src/slider/slick.min.js"></script>
 <!--    <script src="src/js/main.js" defer></script>-->
 </body>
 </html>

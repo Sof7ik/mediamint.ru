@@ -119,6 +119,7 @@ div.product-photos
 	img
 	{
 		transition: all .3s;
+		user-select: none;
 
 		&:hover
 		{
@@ -205,6 +206,78 @@ div.product-photos
 			}
 		}
 	}
+
+	@media all and (max-width: 720px)
+	{
+		div.mini
+		{
+			grid-row-gap: 15px;
+		}
+
+		img.mini-photo {
+			width: 100px;
+			height: 100px;
+		}
+
+		img.big-photo {
+			width: calc((100px * 3) + 30px);
+			height: calc((100px * 3) + 30px);
+		}
+	}
+
+	@media all and (max-width: 490px)
+	{
+		div.mini
+		{
+			grid-row-gap: 15px;
+
+			margin-right: 20px;
+		}
+
+		img.mini-photo {
+			width: 90px;
+			height: 90px;
+		}
+
+		img.big-photo {
+			width: calc((90px * 3) + 30px);
+			height: calc((90px * 3) + 30px);
+
+			&.scaled
+			{
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	@media all and(max-width: 450px)
+	{
+		display: none;
+	}
+}
+
+div.product-photos-slider
+{
+	display: none;
+	max-width: 100%;
+
+	margin-bottom: 20px;
+
+	div.slider-item
+	{
+		img
+		{
+			width: 335px;
+			height: 290px;
+
+			margin: 0 auto;
+		}
+	}
+
+	@media all and(max-width: 450px)
+	{
+		display: block;
+	}
 }
 
 div.product-properties
@@ -234,9 +307,37 @@ div.product-properties
 		font-size: 14px;
 		line-height: 24px;
 
+		@media all and (max-width: 600px)
+		{
+			overflow: hidden;
+
+			max-height: 268px;
+			margin-bottom: 15px;
+		}
+
 		li
 		{
 			margin-left: 15px;
+		}
+	}
+
+	button
+	{
+		border-radius: 25px;
+
+		border: 1px solid #A6A8B5;
+		padding: 3px 17px;
+		color: #A6A8B5;
+		font-size: 12px;
+		line-height: 15px;
+
+		margin-left: 50%;
+		transform: translateX(-50%);
+		
+		&:focus
+		{
+			background-color: $blueColor;
+			color: #fff;
 		}
 	}
 
@@ -273,7 +374,7 @@ div.product__info-right {
 	}
 
 	@media all and (max-width: 1083px) {
-		padding: 30px 0 51.6px 0;
+		padding: 30px 0 0 0;
 	}
 }
 div.buttons
@@ -293,26 +394,26 @@ div.buttons
 	button#getPrice
 	{
 		border: 2px solid transparent;
-		background-color: #2A54A2;
+		background-color: $blueColor;
 		color: #fff;
 
 		margin-right: 34px;
 
 		&:hover
 		{
-			border: 2px solid #2A54A2;
+			border: 2px solid $blueColor;
 			background-color: #fff;
-			color: #2A54A2;
+			color: $blueColor;
 		}
 	}
 
 	button#askQuestion
 	{
-		border: 2px solid #2A54A2;
+		border: 2px solid $blueColor;
 
 		&:hover
 		{
-			background-color: #2A54A2;
+			background-color: $blueColor;
 			color: #fff;
 		}
 	}
@@ -334,6 +435,40 @@ div.buttons
 		button#getPrice {
 			margin-right: 34px;
 			margin-bottom: unset;
+		}
+	}
+
+	@media all and (max-width: 555px)
+	{
+		@include flex(flex, row wrap, flex-start, center);
+
+		button
+		{
+			font-size: 13px;
+		}
+
+		button#getPrice {
+			padding: 10px 17px;
+		}
+
+		button#askQuestion
+		{
+			padding: 10px 13px;
+		}
+	}
+
+	@media all and (max-width: 450px) {
+		button#getPrice {
+			margin-right: 9px;
+		}
+	}
+
+	@media all and (max-width: 370px) {
+		@include flex(flex, column wrap, flex-start, flex-start);
+
+		button#getPrice {
+			margin-right: unset;
+			margin-bottom: 10px;
 		}
 	}
 }
@@ -395,6 +530,14 @@ div.documents-list {
 
 	@media all and (max-width: 1083px) {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media all and (max-width: 860px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media all and (max-width: 565px) {
+		grid-template-columns: 1fr;
 	}
 }
 

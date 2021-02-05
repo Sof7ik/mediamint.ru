@@ -7,6 +7,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modalHandler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _imagePreviewHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _sliderInit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+
 
 
 const getPriceBtn = document.getElementById('getPrice');
@@ -16,6 +18,10 @@ getPriceBtn.addEventListener('click', _modalHandler__WEBPACK_IMPORTED_MODULE_0__
 askQuestionBtn.addEventListener('click', _modalHandler__WEBPACK_IMPORTED_MODULE_0__.default);
 previewImage.addEventListener('click', _imagePreviewHandler__WEBPACK_IMPORTED_MODULE_1__.scalePreviewImage);
 (0,_imagePreviewHandler__WEBPACK_IMPORTED_MODULE_1__.default)(document.querySelectorAll('.product-photos .mini img'));
+
+if (document.getElementById('slider')) {
+  (0,_sliderInit__WEBPACK_IMPORTED_MODULE_2__.default)();
+}
 
 /***/ }),
 /* 1 */
@@ -133,6 +139,22 @@ const scalePreviewImage = e => {
   e.currentTarget.classList.toggle('scaled');
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (imageHandler);
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* export default binding */ __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  $(document).ready(function () {
+    $('.product-photos-slider').slick({
+      infinite: true
+    });
+  });
+}
 
 /***/ })
 /******/ 	]);
