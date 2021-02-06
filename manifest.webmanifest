@@ -1,16 +1,25 @@
 {
   "name": "Металломер - металлография, пробородготовка, абразивные материалы",
   "short_name": "Металломер",
+  "description": "Здесь вы можете купить химические полимеры для различных видов деятельности. Мы занимаемся металлографией, пробородготовкой, а также у нас можно купить абразивные материалы",
+
   "lang": "ru",
-  "start_url": "https://sof7ik.github.io/metallomer.ru/",
+
+  //"start_url": "https://sof7ik.github.io/metallomer.ru/",
+  "start_url": "/",
+  "scope": "/",
+
   "display": "standalone",
   "orientation": "portrait",
+
   "theme_color": "#12173a",
+  "background_color": "#12173a",
+
   "icons": [
     {
-        "src": "./apple-touch-icon",
-        "sizes": "180x180",
-        "type": "image/png"
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     },
     {
       "src": "./192.png",
@@ -22,6 +31,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "background_color": "#12173a",
+  ]
 }
