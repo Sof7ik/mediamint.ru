@@ -3,10 +3,15 @@
   "short_name": "Металломер",
   "lang": "ru",
   "start_url": "https://sof7ik.github.io/metallomer.ru/",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#12173a",
   "icons": [
+    {
+        "src": "./apple-touch-icon",
+        "sizes": "180x180",
+        "type": "image/png"
+    },
     {
       "src": "./192.png",
       "sizes": "192x192",
@@ -15,11 +20,6 @@
     {
       "src": "./512.png",
       "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "./apple-touch-icon",
-      "sizes": "180x180",
       "type": "image/png"
     }
   ],
