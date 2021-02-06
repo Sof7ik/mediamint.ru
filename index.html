@@ -23,6 +23,8 @@
     <link rel="icon" href="./icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
+    <script async src=src/js/picturefill/picturefill.min.js></script>
+
     <link rel="stylesheet" href="./dist/index.css"/>
     <link rel="stylesheet" type="text/css" href="./src/slider/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./src/slider/slick-theme.css"/>
@@ -191,12 +193,36 @@
                     <section class="product__info-left">
                         <section class="product-photos">
                             <div class="mini">
-                                <img src="./src/img/photos/1.png" alt="product-photo" class="mini-photo">
-                                <img src="./src/img/photos/2.png" alt="product-photo" class="mini-photo">
-                                <img src="./src/img/photos/3.png" alt="product-photo" class="mini-photo">
+                                <picture>
+                                    <source srcset='./src/img/photos/compressed/1.webp' type='image/webp'
+                                            class="mini-photo">
+                                    <img src="./src/img/photos/1.png" alt="product-photo" class="mini-photo">
+<!--                                    <img src="./src/img/photos/compressed/1.webp" alt="product-photo"-->
+<!--                                         class="mini-photo">-->
+                                </picture>
+
+                                <picture>
+                                    <source srcset='./src/img/photos/compressed/2.webp' type='image/webp' class="mini-photo">
+                                    <img src="./src/img/photos/2.png" alt="product-photo" class="mini-photo">
+<!--                                    <img src="./src/img/photos/compressed/2.webp" alt="product-photo"-->
+<!--                                         class="mini-photo">-->
+                                </picture>
+
+                                <picture>
+                                    <source srcset='./src/img/photos/compressed/3.webp' type='image/webp' class="mini-photo">
+                                    <img src="./src/img/photos/3.png" alt="product-photo" class="mini-photo">
+<!--                                    <img src="./src/img/photos/compressed/3.webp" alt="product-photo" class="mini-photo">-->
+                                </picture>
                             </div>
-                            <img src="./src/img/photos/big.png" alt="product-photo" class="big-photo"
-                                 id="current-preview">
+
+                            <picture>
+<!--                                <img src="./src/img/photos/compressed/big.webp" alt="product-photo" class="big-photo"-->
+<!--                                     id="current-preview">-->
+                                <source srcset='./src/img/photos/compressed/big.webp' type='image/webp' class="big-photo">
+                                <img src="./src/img/photos/big.png" alt="product-photo" class="big-photo"
+                                     id="current-preview">
+                            </picture>
+
                         </section>
 
                         <section class="product-photos-slider" id="slider">
