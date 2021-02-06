@@ -2,7 +2,7 @@
   "name": "Металломер - металлография, пробородготовка, абразивные материалы",
   "short_name": "Металломер",
   "lang": "ru",
-  "start_url": "/sof7ik.github.io/metallomer.ru",
+  "start_url": "https://sof7ik.github.io/metallomer.ru/",
   "display": "fullscreen",
   "orientation": "portrait",
   "theme_color": "#12173a",
@@ -22,5 +22,6 @@
       "sizes": "180x180",
       "type": "image/png"
     }
-  ]
+  ],
+  "background_color": "#12173a",
 }
