@@ -121,8 +121,9 @@
                         </svg>
                     </label>
                     <input type="submit" value="Искать" class="search-btn" id="search-btn">
-                    <label for="searchOnSite"></label>
+
                     <input type="text" placeholder="Поиск по сайту" id="searchOnSite">
+                    <label for="searchOnSite"></label>
                 </form>
                 
                 <div class="contacts">
@@ -130,19 +131,21 @@
                 </div>
             </div>
 
-            <button class="burger-navigation" id="openBurgerMenu" name="openBurger"></button>
+            <button class="burger-navigation" id="openBurgerMenu" aria-label="openBurgerMenu"></button>
 
             <div class="burger-menu" id="burgerMenu">
                 <div class="burger-menu-wrapper">
                     <form action="#" method="POST" class="search burger-header-search">
+
                         <label for="burger-search-btn">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.8562 14.1839L10.9835 10.3731C11.9976 9.27122 12.6207 7.81401 12.6207 6.21051C12.6202 2.78032 9.79489 0 6.30939 0C2.82388 0 -0.00146484 2.78032 -0.00146484 6.21051C-0.00146484 9.6407 2.82388 12.421 6.30939 12.421C7.81537 12.421 9.19662 11.9001 10.2816 11.0341L14.1694 14.86C14.3588 15.0466 14.6663 15.0466 14.8558 14.86C15.0456 14.6734 15.0456 14.3705 14.8562 14.1839ZM6.30939 11.4655C3.36027 11.4655 0.969549 9.11277 0.969549 6.21051C0.969549 3.30825 3.36027 0.955524 6.30939 0.955524C9.25853 0.955524 11.6492 3.30825 11.6492 6.21051C11.6492 9.11277 9.25853 11.4655 6.30939 11.4655Z" fill="#333333"/>
                             </svg>
                         </label>
                         <input type="submit" value="Искать" class="search-btn" id="burger-search-btn">
-                        <label for="searchOnSiteBurger"></label>
+
                         <input type="text" placeholder="Поиск по сайту" id="searchOnSiteBurger">
+                        <label for="searchOnSiteBurger"></label>
                     </form>
                 </div>
 
@@ -177,16 +180,16 @@
                 </span>
             </nav>
 
-            <div class="product">
-                <div class="product-head">
+            <section class="product">
+                <article class="product-head">
                     <h1 class="product__name">TECHNOVIT 7200</h1>
 
-                    <span class="product__description">Полимер для тонких срезов в медицине и стоматологии</span>
-                </div>
+                    <h2 class="product__description">Полимер для тонких срезов в медицине и стоматологии</h2>
+                </article>
 
-                <div class="product__info">
-                    <div class="product__info-left">
-                        <div class="product-photos">
+                <section class="product__info">
+                    <section class="product__info-left">
+                        <section class="product-photos">
                             <div class="mini">
                                 <img src="./src/img/photos/1.png" alt="product-photo" class="mini-photo">
                                 <img src="./src/img/photos/2.png" alt="product-photo" class="mini-photo">
@@ -194,9 +197,9 @@
                             </div>
                             <img src="./src/img/photos/big.png" alt="product-photo" class="big-photo"
                                  id="current-preview">
-                        </div>
+                        </section>
 
-                        <div class="product-photos-slider" id="slider">
+                        <section class="product-photos-slider" id="slider">
                             <div class="slider-item">
                                 <img src="./src/img/photos/1.png" alt="product-slider-photo">
                             </div>
@@ -209,10 +212,10 @@
                             <div class="slider-item">
                                 <img src="./src/img/photos/big.png" alt="product-slider-photo">
                             </div>
-                        </div>
+                        </section>
 
-                        <div class="product-properties">
-                            <span class="properties-title">СВОЙСТВА И СФЕРЫ ПРИМЕНЕНИЯ</span>
+                        <article class="product-properties">
+                            <h3 class="properties-title">СВОЙСТВА И СФЕРЫ ПРИМЕНЕНИЯ</h3>
 
                             <ul class="properties-text" id="properties-text">
                                 <li>Запрессовка для нарезания микротомом</li>
@@ -228,11 +231,11 @@
                             </ul>
 
                             <button id="readMoreProperties">читать всё</button>
-                        </div>
-                    </div>
+                        </article>
+                    </section>
 
-                    <div class="product__info-right">
-                        <span class="description-title">TECHNOVIT 7200</span>
+                    <section class="product__info-right">
+                        <h2 class="description-title">TECHNOVIT 7200</h2>
 
                         <div class="buttons">
                             <button class="btn" id="getPrice" data-modaltype="1 price">Запросить цену</button>
@@ -240,7 +243,7 @@
                                 товару</button>
                         </div>
 
-                        <div class="description-text">
+                        <article class="description-text">
                             <p class="description-text">
                                 Technovit 7100 - полимер для нарезания. Является идеальной заливочной смолой для образцов,
                                 подготавливаемых с помощью микротома. Трехкомпонентный материал гарантирует отличную
@@ -271,15 +274,15 @@
                                 <b>Аксессуары для работы:</b> заливочная форма Ø25 мм, вставка для заливочной формы,
                                            Histoform S/Q, держатель ножа (17 см), упаковка ножей Histoknife 30/100 шт.
                             </p>
-                        </div>
+                        </article>
 
                         <div class="documents">
-                            <span class="documents-title">Документы</span>
+                            <h3 class="documents-title">Документы</h3>
 
                             <div class="documents-list">
                                 <a href="https://www.morphisto.de/uploads/tx_aimeos/gebrauchsanweisungen/Gebrauchsanweisung_TECHNOVIT%C2%AE_7200_17572.pdf"
                                    target="_blank"
-                                   class="document-link odd-item"
+                                   class="document-link"
                                 >
                                     <div class="document">
                                         <svg width="38" height="47" viewBox="0 0 38 47" xmlns="http://www.w3.org/2000/svg">
@@ -306,9 +309,9 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </section>
+                </section>
+            </section>
 
         </main>
     </div>
