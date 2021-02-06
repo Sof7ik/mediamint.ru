@@ -121,7 +121,8 @@ askQuestionBtn.addEventListener('click', _modalHandler__WEBPACK_IMPORTED_MODULE_
 
 const burgerMenuElem = document.getElementById('burgerMenu');
 const burgerMenuButton = document.getElementById('openBurgerMenu');
-Object(_burgerMenu__WEBPACK_IMPORTED_MODULE_4__["default"])(burgerMenuElem, 'showed', burgerMenuButton);
+Object(_burgerMenu__WEBPACK_IMPORTED_MODULE_4__["default"])(burgerMenuElem, 'showed', burgerMenuButton); // Открытие окна мобильной навигации
+
 Object(_imagePreviewHandler__WEBPACK_IMPORTED_MODULE_1__["default"])(document.querySelectorAll('.product-photos .mini img'));
 Object(_sliderInit__WEBPACK_IMPORTED_MODULE_3__["default"])();
 

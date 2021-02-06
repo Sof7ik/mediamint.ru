@@ -30,6 +30,7 @@ askQuestionBtn.addEventListener('click', modalHandler);
 const burgerMenuElem = document.getElementById('burgerMenu');
 const burgerMenuButton = document.getElementById('openBurgerMenu');
 burgerMenuHandler(burgerMenuElem, 'showed', burgerMenuButton);
+// Открытие окна мобильной навигации
 
 imageHandler(document.querySelectorAll('.product-photos .mini img'));
 
