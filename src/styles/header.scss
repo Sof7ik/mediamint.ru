@@ -184,7 +184,7 @@ div.burger-menu {
 	position: absolute;
 	z-index: 2;
 	top: calc(27.433px + 20px + 19px);
-	right: -280px;
+	right: -400px;
 
 	background-color: #12173A;
 
@@ -203,6 +203,17 @@ div.burger-menu {
 
 		&:first-child {
 			border-top: none;
+		}
+
+		&.contacts
+		{
+			@include flex (flex, row wrap, center, flex-start);
+
+			a
+			{
+				color: #fff;
+				font-size: 18px;
+			}
 		}
 	}
 
@@ -252,17 +263,6 @@ div.burger-menu {
 				margin-bottom: unset;
 			}
 		}
-	}
-
-	div.contacts a
-	{
-		display: inline-block;
-
-		width: 100%;
-
-		text-align: center;
-		color: #fff;
-		font-size: 18px;
 	}
 
 	@media all and (max-width: 650px) {
