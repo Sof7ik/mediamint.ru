@@ -1,7 +1,26 @@
 {
-  "name": "МЕТАЛЛОМЕР",
+  "name": "Металломер - металлография, пробородготовка, абразивные материалы",
+  "short_name": "Металломер",
+  "lang": "ru",
+  "start_url": "/sof7ik.github.io/metallomer.ru",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "theme_color": "#12173a",
   "icons": [
-    { "src": "./192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "./512.png", "type": "image/png", "sizes": "512x512" }
+    {
+      "src": "./192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./apple-touch-icon",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
   ]
 }
