@@ -6,6 +6,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+
     <link rel="stylesheet" href="./dist/index.css"/>
     <link rel="stylesheet" type="text/css" href="./src/slider/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./src/slider/slick-theme.css"/>
@@ -27,7 +32,7 @@
 
     <div class="modal-wrapper" id="modal-window">
         <!--<div class="modal">-->
-        <form action="" method="POST" class="modal">
+        <form action="#" method="POST" class="modal">
             <div id="close-modal" class="close-modal"></div>
 
             <input
@@ -55,7 +60,7 @@
                     name="question"
                     class="modal-text-input modal-textarea"
                     placeholder="Вопрос"
-                    autocomplete="om"
+                    autocomplete="on"
                     required
             ></textarea>
 
@@ -116,7 +121,7 @@
 
             <div class="burger-menu" id="burgerMenu">
                 <div class="burger-menu-wrapper">
-                    <form action="" method="POST" class="search burger-header-search">
+                    <form action="#" method="POST" class="search burger-header-search">
                         <label for="burger-search-btn">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.8562 14.1839L10.9835 10.3731C11.9976 9.27122 12.6207 7.81401 12.6207 6.21051C12.6202 2.78032 9.79489 0 6.30939 0C2.82388 0 -0.00146484 2.78032 -0.00146484 6.21051C-0.00146484 9.6407 2.82388 12.421 6.30939 12.421C7.81537 12.421 9.19662 11.9001 10.2816 11.0341L14.1694 14.86C14.3588 15.0466 14.6663 15.0466 14.8558 14.86C15.0456 14.6734 15.0456 14.3705 14.8562 14.1839ZM6.30939 11.4655C3.36027 11.4655 0.969549 9.11277 0.969549 6.21051C0.969549 3.30825 3.36027 0.955524 6.30939 0.955524C9.25853 0.955524 11.6492 3.30825 11.6492 6.21051C11.6492 9.11277 9.25853 11.4655 6.30939 11.4655Z" fill="#333333"/>
@@ -355,7 +360,7 @@
 
                         <div class="mail-wrapper">
                             <a href="mailto:info@metallomer.ru" class="contacts-email">info@metallomer.ru</a>
-                            <button id="" class="footer-btn">связаться</button>
+                            <button id="contactWithUs" class="footer-btn">связаться</button>
                         </div>
 
                     </div>
@@ -378,9 +383,9 @@
     </footer>
 
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
-    <script type="text/javascript" src="./src/slider/slick.min.js" defer></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+    <script src="./src/slider/slick.min.js" defer></script>
     <script src="./dist/main.js" defer></script>
 
 <!--    <script src="src/js/main.js" defer></script>-->
