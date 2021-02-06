@@ -405,10 +405,10 @@ nav.breadcrumbs span.breadcrumbs__item a {
 				font-size: 12px;
 }
 nav.breadcrumbs span.breadcrumbs__item a:first-child {
-				margin-left: unset;
+				margin-left: 0;
 }
 nav.breadcrumbs span.breadcrumbs__item:last-child {
-				margin-right: unset;
+				margin-right: 0;
 }
 nav.breadcrumbs span.breadcrumbs__item:last-child a {
 				color: #333333;
@@ -471,7 +471,7 @@ div.product__info-left {
 }
 @media all and (max-width: 1083px) {
 				div.product__info-left {
-								margin-right: unset;
+								margin-right: 0;
 				}
 }
 
@@ -498,11 +498,24 @@ div.product-photos img:hover {
 				cursor: pointer;
 }
 div.product-photos div.mini {
-				display: grid;
-				grid-template-rows: repeat(3, 1fr);
-				grid-template-columns: 1fr;
-				grid-row-gap: 20px;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
 				margin-right: 30px;
+}
+@supports (row-gap: 20px) {
+				div.product-photos div.mini {
+								row-gap: 20px;
+				}
+}
+@supports (display: grid) {
+				div.product-photos div.mini {
+								display: grid;
+								grid-template-rows: repeat(3, 1fr);
+								grid-template-columns: 1fr;
+								grid-row-gap: 20px;
+				}
 }
 div.product-photos img.mini-photo {
 				width: 120px;
@@ -522,11 +535,24 @@ div.product-photos img.big-photo.scaled {
 								margin: 0 auto 33px auto;
 				}
 				div.product-photos div.mini {
-								grid-row-gap: 15px;
+								row-gap: 15px;
+				}
+				@supports (display: grid) {
+								div.product-photos div.mini {
+												grid-row-gap: 15px;
+								}
 				}
 				div.product-photos img.mini-photo {
 								width: 90px;
 								height: 90px;
+				}
+				@supports not (row-gap: 15px) {
+								div.product-photos img.mini-photo {
+												margin-bottom: 15px;
+								}
+								div.product-photos img.mini-photo:last-child {
+												margin-bottom: 0;
+								}
 				}
 				div.product-photos img.big-photo {
 								width: calc((90px * 3) + 30px);
@@ -538,9 +564,6 @@ div.product-photos img.big-photo.scaled {
 				}
 }
 @media all and (max-width: 1083px) {
-				div.product-photos div.mini {
-								grid-row-gap: 20px;
-				}
 				div.product-photos img.mini-photo {
 								width: 140px;
 								height: 140px;
@@ -555,9 +578,6 @@ div.product-photos img.big-photo.scaled {
 				}
 }
 @media all and (max-width: 720px) {
-				div.product-photos div.mini {
-								grid-row-gap: 15px;
-				}
 				div.product-photos img.mini-photo {
 								width: 100px;
 								height: 100px;
@@ -569,7 +589,6 @@ div.product-photos img.big-photo.scaled {
 }
 @media all and (max-width: 490px) {
 				div.product-photos div.mini {
-								grid-row-gap: 15px;
 								margin-right: 20px;
 				}
 				div.product-photos img.mini-photo {
@@ -663,12 +682,22 @@ div.product-properties button {
 }
 @media all and (max-width: 1083px) {
 				div.product-properties {
-								max-width: unset;
+								max-width: 100%;
+				}
+				@supports (max-width: unset) {
+								div.product-properties {
+												max-width: unset;
+								}
 				}
 }
 @media all and (max-width: 980px) {
 				div.product-properties {
-								max-width: unset;
+								max-width: 100%;
+				}
+				@supports (max-width: unset) {
+								div.product-properties {
+												max-width: unset;
+								}
 				}
 }
 
@@ -816,10 +845,37 @@ span.documents-title {
 }
 
 div.documents-list {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				grid-template-rows: 1fr;
-				grid-gap: 50px 28.34px;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+}
+div.documents-list a.document-link.odd-item {
+				margin-right: 50px;
+}
+@supports (row-gap: 28.34px) {
+				div.documents-list {
+								row-gap: 28.34px;
+				}
+}
+div.documents-list a.document-link {
+				margin-bottom: 50px;
+}
+div.documents-list a.document-link:last-child {
+				margin-bottom: unset;
+}
+@supports (column-gap: 50px) {
+				div.documents-list {
+								column-gap: 50px;
+				}
+}
+@supports (display: grid) {
+				div.documents-list {
+								display: grid;
+								grid-template-columns: repeat(2, 1fr);
+								grid-template-rows: 1fr;
+								grid-gap: 50px 28.34px;
+				}
 }
 div.documents-list a.document-link {
 				display: block;
