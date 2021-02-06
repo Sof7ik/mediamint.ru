@@ -5,6 +5,12 @@
 				font-family: "Montserrat", "Roboto", sans-serif;
 }
 
+@media all and (max-width: 450px) {
+				html, body {
+								overflow-x: hidden;
+				}
+}
+
 body {
 				background-color: #F7F7FB;
 }
@@ -172,6 +178,7 @@ header {
 				align-items: center;
 				padding-top: 48px;
 				transition: all 0.3s;
+				position: relative;
 }
 @media all and (max-width: 1024px) {
 				header {
@@ -261,17 +268,23 @@ nav.header-navigation a.header-navigation__link:last-child {
 				}
 }
 
-div.search-contacts-wrapper form.search {
+@media all and (max-width: 650px) {
+				div.search-contacts-wrapper {
+								display: none;
+				}
+}
+
+form.search {
 				margin-right: 68px;
 				display: flex;
 				flex-flow: row nowrap;
 				justify-content: flex-start;
 				align-items: center;
 }
-div.search-contacts-wrapper form.search input[type=submit]#search-btn {
+form.search input[type=submit] {
 				display: none;
 }
-div.search-contacts-wrapper form.search input {
+form.search input {
 				width: 106px;
 				color: #444;
 				font-family: "Roboto", sans-serif;
@@ -282,21 +295,18 @@ div.search-contacts-wrapper form.search input {
 				padding-left: 5px;
 				transition: all 0.3s;
 }
-div.search-contacts-wrapper div.contacts a {
+
+div.contacts a {
 				color: #000;
 				font-family: "Roboto", sans-serif;
 				font-weight: 400;
 				font-size: 16px;
 				line-height: 19px;
 }
-@media all and (max-width: 650px) {
-				div.search-contacts-wrapper {
-								display: none;
-				}
-}
 
-div.burger-navigation {
+button.burger-navigation {
 				display: none;
+				padding: unset;
 				order: 1;
 				width: 30px;
 				height: 17px;
@@ -306,7 +316,74 @@ div.burger-navigation {
 				background-position: center center;
 }
 @media all and (max-width: 650px) {
-				div.burger-navigation {
+				button.burger-navigation {
+								display: block;
+				}
+}
+
+div.burger-menu {
+				display: none;
+				position: absolute;
+				z-index: 2;
+				top: calc(27.433px + 20px + 19px);
+				right: -280px;
+				background-color: #12173A;
+				border-radius: 8px;
+				transition: all 0.3s;
+}
+div.burger-menu.showed {
+				right: 0;
+}
+div.burger-menu div.burger-menu-wrapper {
+				padding: 10px 20px;
+				border-top: 1px solid #fff;
+}
+div.burger-menu div.burger-menu-wrapper:first-child {
+				border-top: none;
+}
+div.burger-menu form {
+				padding: 7px 0;
+				margin-right: unset;
+}
+div.burger-menu form label svg {
+				width: 20px;
+				height: 20px;
+}
+div.burger-menu form label svg path {
+				fill: #fff;
+}
+div.burger-menu form input[type=text] {
+				font-size: 18px;
+				width: 100%;
+				color: #fff;
+}
+div.burger-menu nav {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+}
+div.burger-menu nav a.header-navigation__link {
+				width: 100%;
+				font-size: 16px;
+				margin-bottom: 15px;
+				margin-right: unset;
+				background-color: #fff;
+				border-radius: 8px;
+				padding: 8px 10px;
+}
+div.burger-menu nav a.header-navigation__link:last-child {
+				margin-bottom: unset;
+}
+div.burger-menu div.contacts a {
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				color: #fff;
+				font-size: 18px;
+}
+@media all and (max-width: 650px) {
+				div.burger-menu {
 								display: block;
 				}
 }
@@ -992,39 +1069,39 @@ div.mobile-contacts a.mobile-contacts__item.contacts-email {
 				        text-decoration-line: underline;
 }
 
-div.contacts {
+footer div.contacts {
 				display: flex;
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-end;
 }
-div.contacts div.logo {
+footer div.contacts div.logo {
 				display: none;
 }
-div.contacts div.logo svg.logo-svg {
+footer div.contacts div.logo svg.logo-svg {
 				width: 32.73px;
 				height: 24px;
 				margin-right: 8.73px;
 }
-div.contacts div.logo span svg {
+footer div.contacts div.logo span svg {
 				width: 134.36px;
 				height: 10.25px;
 }
 @media all and (max-width: 450px) {
-				div.contacts div.logo {
+				footer div.contacts div.logo {
 								display: flex;
 								margin-right: 25px;
 				}
 }
-div.contacts a {
+footer div.contacts a {
 				color: #fff;
 }
 @media all and (max-width: 450px) {
-				div.contacts a {
+				footer div.contacts a {
 								display: none;
 				}
 }
-div.contacts a.contacts-tel {
+footer div.contacts a.contacts-tel {
 				font-family: "Roboto", sans-serif;
 				font-weight: 400;
 				font-size: 24px;
@@ -1032,22 +1109,22 @@ div.contacts a.contacts-tel {
 				margin-bottom: 40px;
 }
 @media all and (max-width: 1080px) {
-				div.contacts a.contacts-tel {
+				footer div.contacts a.contacts-tel {
 								margin-bottom: 20px;
 				}
 }
 @media all and (max-width: 450px) {
-				div.contacts a.contacts-tel {
+				footer div.contacts a.contacts-tel {
 								display: none;
 				}
 }
-div.contacts div.mail-wrapper {
+footer div.contacts div.mail-wrapper {
 				display: flex;
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: flex-start;
 }
-div.contacts div.mail-wrapper a.contacts-email {
+footer div.contacts div.mail-wrapper a.contacts-email {
 				font-weight: 400;
 				font-size: 16px;
 				line-height: 19px;
@@ -1055,7 +1132,7 @@ div.contacts div.mail-wrapper a.contacts-email {
 				        text-decoration-line: underline;
 				margin-bottom: 14px;
 }
-div.contacts div.mail-wrapper button {
+footer div.contacts div.mail-wrapper button {
 				font-family: "Roboto", sans-serif;
 				font-weight: 400;
 				font-size: 12px;
@@ -1066,12 +1143,12 @@ div.contacts div.mail-wrapper button {
 				padding: 3px 21px;
 }
 @media all and (max-width: 450px) {
-				div.contacts div.mail-wrapper button {
+				footer div.contacts div.mail-wrapper button {
 								max-width: 100px;
 				}
 }
 @media all and (max-width: 450px) {
-				div.contacts {
+				footer div.contacts {
 								display: flex;
 								flex-flow: row wrap;
 								justify-content: center;

@@ -94,6 +94,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _imagePreviewHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _readAllHandler__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _sliderInit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _burgerMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+
 
 
 
@@ -115,7 +117,11 @@ Object(_readAllHandler__WEBPACK_IMPORTED_MODULE_2__["default"])(readAllBtn, prop
 
 getPriceBtn.addEventListener('click', _modalHandler__WEBPACK_IMPORTED_MODULE_0__["default"]);
 askQuestionBtn.addEventListener('click', _modalHandler__WEBPACK_IMPORTED_MODULE_0__["default"]); // Модальное окно
+// Открытие окна мобильной навигации
 
+const burgerMenuElem = document.getElementById('burgerMenu');
+const burgerMenuButton = document.getElementById('openBurgerMenu');
+Object(_burgerMenu__WEBPACK_IMPORTED_MODULE_4__["default"])(burgerMenuElem, 'showed', burgerMenuButton);
 Object(_imagePreviewHandler__WEBPACK_IMPORTED_MODULE_1__["default"])(document.querySelectorAll('.product-photos .mini img'));
 Object(_sliderInit__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
@@ -287,6 +293,21 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
 });
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return burgerMenuHandler; });
+function burgerMenuHandler(burgerMenuElem, classToToggle, buttonToOpenClose) {
+  const openCloseMenu = e => {
+    burgerMenuElem.classList.toggle(classToToggle);
+  };
+
+  buttonToOpenClose.addEventListener('click', openCloseMenu);
+}
 
 /***/ })
 /******/ ]);
