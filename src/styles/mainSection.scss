@@ -51,7 +51,9 @@ nav.breadcrumbs
 			margin-left: 9.5px;
 			margin-right: 9.5px;
 
-			background-image: url("/src/img/breadcrumb_arrow.svg");
+			//background-image: url("/src/img/breadcrumb_arrow.svg");
+			background-image: url("/src/img/breadcrumb_arrow.png");
+			//background-image: url("/src/img/breadcrumb_arrow.svg");
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: contain;
@@ -319,6 +321,8 @@ div.product-properties
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 24px;
+
+		transition: all 0.3s cubic-bezier(0, 1, 0, 1);
 
 		@media all and (max-width: 600px)
 		{
