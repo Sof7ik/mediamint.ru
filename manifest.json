@@ -5,7 +5,7 @@
 
   "lang": "ru",
 
-  "start_url": "/",
+  "start_url": "index.html/",
   "scope": "/",
 
   "display": "standalone",
@@ -18,8 +18,7 @@
     {
       "src": "./apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "./192.png",
