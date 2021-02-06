@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <meta name="description"
-          content="Здесь вы можете купить химические полимеры для различных видов деятельности. Мы занимаемся
-          металлографией, пробородготовкой, а также у нас можно купить абразивные материалы">
+          content="Здесь вы можете купить химические полимеры для различных видов деятельности. Мы занимаемся металлографией, пробородготовкой, а также у нас можно купить абразивные материалы">
     <meta name="keywords" content="полимеры, металлография, пробородготовка, абразивные материалы">
 
     <meta name="robots" content="index,follow">
@@ -19,7 +18,7 @@
 
     <meta name="theme-color" content="#12173a">
 
-    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="manifest" href="./manifest.json">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./apple-touch-icon.png">
@@ -122,7 +121,8 @@
                         </svg>
                     </label>
                     <input type="submit" value="Искать" class="search-btn" id="search-btn">
-                    <input type="text" placeholder="Поиск по сайту">
+                    <label for="searchOnSite"></label>
+                    <input type="text" placeholder="Поиск по сайту" id="searchOnSite">
                 </form>
                 
                 <div class="contacts">
@@ -130,7 +130,7 @@
                 </div>
             </div>
 
-            <button class="burger-navigation" id="openBurgerMenu"></button>
+            <button class="burger-navigation" id="openBurgerMenu" name="openBurger"></button>
 
             <div class="burger-menu" id="burgerMenu">
                 <div class="burger-menu-wrapper">
@@ -141,7 +141,8 @@
                             </svg>
                         </label>
                         <input type="submit" value="Искать" class="search-btn" id="burger-search-btn">
-                        <input type="text" placeholder="Поиск по сайту">
+                        <label for="searchOnSiteBurger"></label>
+                        <input type="text" placeholder="Поиск по сайту" id="searchOnSiteBurger">
                     </form>
                 </div>
 
@@ -276,7 +277,10 @@
                             <span class="documents-title">Документы</span>
 
                             <div class="documents-list">
-                                <a href="https://www.morphisto.de/uploads/tx_aimeos/gebrauchsanweisungen/Gebrauchsanweisung_TECHNOVIT%C2%AE_7200_17572.pdf" target="_blank" class="document-link">
+                                <a href="https://www.morphisto.de/uploads/tx_aimeos/gebrauchsanweisungen/Gebrauchsanweisung_TECHNOVIT%C2%AE_7200_17572.pdf"
+                                   target="_blank"
+                                   class="document-link odd-item"
+                                >
                                     <div class="document">
                                         <svg width="38" height="47" viewBox="0 0 38 47" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9.35726 29.857C9.35726 29.0863 8.82248 28.6267 7.87892 28.6267C7.49362 28.6267 7.23268 28.6647 7.09619 28.7011V31.1738C7.2578 31.2102 7.45647 31.2224 7.7303 31.2224C8.73605 31.2224 9.35726 30.7142 9.35726 29.857Z" fill="#8A8A8C"/>
@@ -287,7 +291,10 @@
                                     </div>
                                 </a>
 
-                                <a href="https://www.morphisto.de/uploads/tx_aimeos/SDB/MSDS_TECHNOVIT%C2%AE_7200_17571_DE.pdf" target="_blank" class="document-link">
+                                <a href="https://www.morphisto.de/uploads/tx_aimeos/SDB/MSDS_TECHNOVIT%C2%AE_7200_17571_DE.pdf"
+                                   target="_blank"
+                                   class="document-link"
+                                >
                                     <div class="document">
                                         <svg width="38" height="47" viewBox="0 0 38 47" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9.35726 29.857C9.35726 29.0863 8.82248 28.6267 7.87892 28.6267C7.49362 28.6267 7.23268 28.6647 7.09619 28.7011V31.1738C7.2578 31.2102 7.45647 31.2224 7.7303 31.2224C8.73605 31.2224 9.35726 30.7142 9.35726 29.857Z" fill="#8A8A8C"/>
@@ -394,7 +401,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
