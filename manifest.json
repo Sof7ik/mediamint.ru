@@ -5,8 +5,8 @@
 
   "lang": "ru",
 
-  "start_url": "/index.html",
-  "scope": "/",
+  "start_url": "https://sof7ik.github.io/metallomer.ru/index.html",
+  "scope": "https://sof7ik.github.io/metallomer.ru/",
 
   "display": "standalone",
   "orientation": "portrait",
