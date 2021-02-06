@@ -1,5 +1,7 @@
-const imageHandler = (images) => {
-    const changeImage = e => {
+function imageHandler (images)
+{
+    function changeImage (e)
+    {
         let tempSrc;
 
         let clickedImage = e.currentTarget;
@@ -10,10 +12,11 @@ const imageHandler = (images) => {
         previewImage.setAttribute('src', tempSrc);
     }
 
-    images.forEach(item => item.addEventListener('click', changeImage));
+    images.forEach(function (item) {item.addEventListener('click', changeImage)});
 }
 
-export const scalePreviewImage = (e) => {
+export function scalePreviewImage (e)
+{
     e.currentTarget.classList.toggle('scaled');
 }
 

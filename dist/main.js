@@ -134,22 +134,24 @@ Object(_sliderInit__WEBPACK_IMPORTED_MODULE_3__["default"])();
 __webpack_require__.r(__webpack_exports__);
 const modalWindowElem = document.getElementById('modal-window');
 
-const modalHandler = e => {
-  const formHandler = (event, formData) => {
+function modalHandler(e) {
+  function formHandler(event, formData) {
     const item = event.currentTarget.name;
 
     if (formData.hasOwnProperty(item)) {
       formData[item] = event.currentTarget.value;
     }
-  };
+  }
 
-  const checkData = inputElem => {
+  function checkData(inputElem) {
     return inputElem.value.trim() !== '';
-  };
+  }
 
-  const sendData = (e, data, ...elementsToCheck) => {
+  function sendData(e, data, ...elementsToCheck) {
     e.preventDefault();
-    let sendDecision = !elementsToCheck.map(item => checkData(item)).includes(false);
+    let sendDecision = !elementsToCheck.map(function (item) {
+      checkData(item).includes(false);
+    });
 
     if (sendDecision) {
       for (const formItem in data) {
@@ -163,21 +165,29 @@ const modalHandler = e => {
       confirm('Заполните все поля');
       throw new Error('Заполните поля!');
     }
-  };
+  }
 
-  const closeModal = e => {
-    document.getElementById('modal-name').removeEventListener('input', e => formHandler(e, form));
-    document.getElementById('modal-tel').removeEventListener('input', e => formHandler(e, form));
-    document.getElementById('modal-comment').removeEventListener('input', e => formHandler(e, form));
-    document.getElementById('modal-submit').removeEventListener('click', e => sendData(e, form));
+  function closeModal(e) {
+    document.getElementById('modal-name').removeEventListener('input', function (e) {
+      formHandler(e, form);
+    });
+    document.getElementById('modal-tel').removeEventListener('input', function (e) {
+      formHandler(e, form);
+    });
+    document.getElementById('modal-comment').removeEventListener('input', function (e) {
+      formHandler(e, form);
+    });
+    document.getElementById('modal-submit').removeEventListener('click', function (e) {
+      sendData(e, form);
+    });
     document.getElementById('close-modal').removeEventListener('click', closeModal);
-    modalWindowElem.removeEventListener('click', e => {
+    modalWindowElem.removeEventListener('click', function (e) {
       if (e.currentTarget === e.target) closeModal();
     });
     document.getElementById('modal-comment').style.display === 'block' ? 'none' : 'none';
     modalWindowElem.style.display = 'none';
     document.body.style.overflow = 'auto';
-  };
+  }
 
   const form = {
     name: '',
@@ -196,7 +206,9 @@ const modalHandler = e => {
     // Поле для вопроса становится видимым.
     document.getElementById('modal-comment').style.display = 'block';
     modalQuestionElem = document.getElementById('modal-comment');
-    modalQuestionElem.addEventListener('input', e => formHandler(e, form)); //document.getElementById('modal-submit').value = 'задать вопрос';
+    modalQuestionElem.addEventListener('input', function (e) {
+      formHandler(e, form);
+    }); //document.getElementById('modal-submit').value = 'задать вопрос';
 
     document.getElementById('modal-submit').textContent = 'задать вопрос';
   }
@@ -204,9 +216,13 @@ const modalHandler = e => {
   document.body.style.overflow = 'hidden';
   modalNameElem = document.getElementById('modal-name');
   modalTelElem = document.getElementById('modal-tel');
-  modalNameElem.addEventListener('input', e => formHandler(e, form));
-  modalTelElem.addEventListener('input', e => formHandler(e, form));
-  document.getElementById('modal-submit').addEventListener('click', e => {
+  modalNameElem.addEventListener('input', function (e) {
+    formHandler(e, form);
+  });
+  modalTelElem.addEventListener('input', function (e) {
+    formHandler(e, form);
+  });
+  document.getElementById('modal-submit').addEventListener('click', function (e) {
     if (modalType === 1) {
       sendData(e, form, modalNameElem, modalTelElem);
     } else {
@@ -214,10 +230,10 @@ const modalHandler = e => {
     }
   });
   document.getElementById('close-modal').addEventListener('click', closeModal);
-  modalWindowElem.addEventListener('click', e => {
+  modalWindowElem.addEventListener('click', function (e) {
     if (e.currentTarget === e.target) closeModal();
   });
-};
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (modalHandler);
 
@@ -228,22 +244,24 @@ const modalHandler = e => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scalePreviewImage", function() { return scalePreviewImage; });
-const imageHandler = images => {
-  const changeImage = e => {
+function imageHandler(images) {
+  function changeImage(e) {
     let tempSrc;
     let clickedImage = e.currentTarget;
     let previewImage = document.getElementById('current-preview');
     tempSrc = clickedImage.src;
     clickedImage.setAttribute('src', previewImage.src);
     previewImage.setAttribute('src', tempSrc);
-  };
+  }
 
-  images.forEach(item => item.addEventListener('click', changeImage));
-};
+  images.forEach(function (item) {
+    item.addEventListener('click', changeImage);
+  });
+}
 
-const scalePreviewImage = e => {
+function scalePreviewImage(e) {
   e.currentTarget.classList.toggle('scaled');
-};
+}
 /* harmony default export */ __webpack_exports__["default"] = (imageHandler);
 
 /***/ }),
@@ -256,10 +274,10 @@ __webpack_require__.r(__webpack_exports__);
   function showText(e, textElem) {
     textElem.style.maxHeight = 'max-content';
     e.currentTarget.textContent = 'свернуть';
-    e.currentTarget.removeEventListener('click', e => {
+    e.currentTarget.removeEventListener('click', function (e) {
       showText(e, textElement);
     });
-    e.currentTarget.addEventListener('click', e => {
+    e.currentTarget.addEventListener('click', function (e) {
       hideText(e, textElement, 268);
     });
   }
@@ -267,15 +285,15 @@ __webpack_require__.r(__webpack_exports__);
   function hideText(e, textElem, maxHeight = '') {
     textElem.style.maxHeight = maxHeight + 'px';
     e.currentTarget.textContent = 'читать всё';
-    e.currentTarget.removeEventListener('click', e => {
+    e.currentTarget.removeEventListener('click', function (e) {
       hideText(e, textElement, 268);
     });
-    e.currentTarget.addEventListener('click', e => {
+    e.currentTarget.addEventListener('click', function (e) {
       showText(e, textElement);
     });
   }
 
-  elem.addEventListener('click', e => {
+  elem.addEventListener('click', function (e) {
     showText(e, textElement);
   });
 });
@@ -303,9 +321,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return burgerMenuHandler; });
 function burgerMenuHandler(burgerMenuElem, classToToggle, buttonToOpenClose) {
-  const openCloseMenu = e => {
+  function openCloseMenu(e) {
     burgerMenuElem.classList.toggle(classToToggle);
-  };
+  }
 
   buttonToOpenClose.addEventListener('click', openCloseMenu);
 }

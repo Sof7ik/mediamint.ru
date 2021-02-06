@@ -1,8 +1,8 @@
 const modalWindowElem = document.getElementById('modal-window');
 
-const modalHandler = e => {
-
-    const formHandler = (event, formData) =>
+function modalHandler (e)
+{
+    function formHandler (event, formData)
     {
         const item = event.currentTarget.name;
         if (formData.hasOwnProperty(item))
@@ -11,14 +11,16 @@ const modalHandler = e => {
         }
     }
 
-    const checkData = inputElem => {
+    function checkData (inputElem)
+    {
         return inputElem.value.trim() !== '';
     }
 
-    const sendData = (e, data, ...elementsToCheck) => {
+    function sendData (e, data, ...elementsToCheck)
+    {
         e.preventDefault();
 
-        let sendDecision = !(elementsToCheck.map( item => checkData(item)).includes(false));
+        let sendDecision = !( elementsToCheck.map( function (item) { checkData(item).includes(false) } ) );
 
         if (sendDecision)
         {
@@ -38,14 +40,14 @@ const modalHandler = e => {
         }
     }
 
-    const closeModal = e => {
-        document.getElementById('modal-name').removeEventListener('input', e => formHandler(e, form));
-        document.getElementById('modal-tel').removeEventListener('input', e => formHandler(e, form));
-        document.getElementById('modal-comment').removeEventListener('input', e => formHandler(e, form));
-        document.getElementById('modal-submit').removeEventListener('click', e => sendData(e, form));
+    function closeModal (e) {
+        document.getElementById('modal-name').removeEventListener('input', function (e) { formHandler(e, form)});
+        document.getElementById('modal-tel').removeEventListener('input', function (e) { formHandler(e, form)});
+        document.getElementById('modal-comment').removeEventListener('input', function (e) { formHandler(e, form)});
+        document.getElementById('modal-submit').removeEventListener('click', function (e) { sendData(e, form)});
 
         document.getElementById('close-modal').removeEventListener('click', closeModal);
-        modalWindowElem.removeEventListener('click', e => {
+        modalWindowElem.removeEventListener('click', function (e) {
             if (e.currentTarget === e.target) closeModal()
         });
 
@@ -75,7 +77,7 @@ const modalHandler = e => {
         // Поле для вопроса становится видимым.
         document.getElementById('modal-comment').style.display = 'block';
         modalQuestionElem = document.getElementById('modal-comment');
-        modalQuestionElem.addEventListener('input', e => formHandler(e, form));
+        modalQuestionElem.addEventListener('input', function (e) { formHandler(e, form) } );
         //document.getElementById('modal-submit').value = 'задать вопрос';
         document.getElementById('modal-submit').textContent = 'задать вопрос';
     }
@@ -85,10 +87,10 @@ const modalHandler = e => {
     modalNameElem = document.getElementById('modal-name');
     modalTelElem = document.getElementById('modal-tel');
 
-    modalNameElem.addEventListener('input', e => formHandler(e, form));
-    modalTelElem.addEventListener('input', e => formHandler(e, form));
+    modalNameElem.addEventListener('input', function (e) { formHandler(e, form)});
+    modalTelElem.addEventListener('input', function (e) { formHandler(e, form)});
 
-    document.getElementById('modal-submit').addEventListener('click', e => {
+    document.getElementById('modal-submit').addEventListener('click', function (e) {
         if (modalType === 1)
         {
             sendData(e, form, modalNameElem, modalTelElem);
@@ -100,7 +102,7 @@ const modalHandler = e => {
     });
 
     document.getElementById('close-modal').addEventListener('click', closeModal);
-    modalWindowElem.addEventListener('click', e => {
+    modalWindowElem.addEventListener('click', function (e) {
         if (e.currentTarget === e.target) closeModal()
     });
 }

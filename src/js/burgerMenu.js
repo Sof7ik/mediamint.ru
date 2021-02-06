@@ -1,6 +1,6 @@
 export default function burgerMenuHandler(burgerMenuElem, classToToggle, buttonToOpenClose)
 {
-    const openCloseMenu = (e) =>
+    function openCloseMenu (e)
     {
         burgerMenuElem.classList.toggle(classToToggle);
     }
