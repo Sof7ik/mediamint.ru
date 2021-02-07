@@ -73,7 +73,7 @@ ___
 
 ___
 # Разработчикам
-##J avaScript
+## JavaScript
 Собран через Prepros с babel(target browsers: defaults) -> import/export -> minify в файл dist/main.js. Все 
 исходные файлы иимпортированы в файл **src/js/main.js**, который, в свою очередь, прогнался через Prepros
 . Использовалось
