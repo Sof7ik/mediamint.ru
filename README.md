@@ -3,7 +3,7 @@
 ![Логотип](./readme%20imgs/logo.svg)
 ___
 
-#Карточка товара в магазине Металломер
+# Карточка товара в магазине Металломер
 **[Металломер](http://metallomer.ru/, "ООО НПО «Металломер»")** предлагает новейший, систематизированный ассортимент 
 продуктов для программ по металлографи и петрографии,гистологии и предоставляет высококачественные разработки для любых 
 целей.
@@ -13,7 +13,7 @@ ___
 гистологии, оптики и т.п.).
 ___
 
-##Исользуемые технологии
+## Исользуемые технологии
 1. HTML/SASS (в синтаксисе SCSS)
 2. JavaScript (ES6)
 3. PWA (Progressive Web Apps)
@@ -21,7 +21,7 @@ ___
 5. Изобраения в формате WebP
 ___
 
-##Функционал
+## Функционал
 * Поиск по сайту
 * Меню для мобильных устройств
 * Смена изображений в блоке с изображениями
@@ -29,8 +29,8 @@ ___
 * Установка сайта в качестве приложения на рабочий стол (PWA)
 ___
 
-##Скриншоты
-###Общий вид сайта на компьютере
+## Скриншоты
+### Общий вид сайта на компьютере
 * Google Chrome<br>
 ![Google](./readme%20imgs/chrome%20desktop.png)<br><br>
 * Microsoft Edge<br>
@@ -38,7 +38,7 @@ ___
 * Mozilla Firefox<br>
 ![Mozilla](./readme%20imgs/mozilla%20desktop.png)<br><br>
 
-###Общий вид сайта на мобильных устройствах
+### Общий вид сайта на мобильных устройствах
 * Google Chrome <br>
 ![Google](./readme%20imgs/chrome%20preview.png)<br><br>
 * Microsoft Edge <br>
@@ -47,7 +47,7 @@ ___
 ![Mozilla](./readme%20imgs/mozilla%20preview.png)<br><br>
 
 
-###Установка в качестве PWA
+### Установка в качестве PWA
 * Ярлык на рабочем столе Windows<br>
 ![Windows](./readme%20imgs/PWA%20shortcut%20Windows.png)<br><br>
 * Ярлык на рабочем столе мобильного устройства <br>
@@ -63,7 +63,7 @@ ___
 [Видео-демонстрация](https://yadi.sk/i/HwU5ojJ_HRDY0A, "Видео из PWA") UX в PWA с мобильного устройства
 ___
 
-##LightHouse Audit
+## LightHouse Audit
 Аудит для мобильных устройств на примере Moto G4<br>
 ![Mobile Audit](./readme%20imgs/mobile%20lighthouse.png)<br><br>
 Аудит для стационарных устройств<br>
@@ -72,13 +72,13 @@ ___
 ![Mobile Audit](./readme%20imgs/PWA.png)<br><br>
 
 ___
-#Разработчикам
-##JavaScript
+# Разработчикам
+##J avaScript
 Собран через Prepros с babel(target browsers: defaults) -> import/export -> minify в файл dist/main.js. Все 
 исходные файлы иимпортированы в файл **src/js/main.js**, который, в свою очередь, прогнался через Prepros
 . Использовалось
 объявление функций не в ES6 синтаксисе с целью оптимизации для IE11, но babel
  не смог. А переписывать было лень обратно на **const foo () => {}**.
-##SCSS
+## SCSS
 Собран также через Prepros с AutoPrefixer -> Minify. Все исходые файлы импортированы в **src/styles/index.scss**, 
 который прогоняется через Prepros в dist/index.css
